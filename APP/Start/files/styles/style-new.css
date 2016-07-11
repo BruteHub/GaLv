@@ -1,0 +1,688 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+#dashboard #banner  .slide.in {
+    -webkit-animation-name: slideIn;
+		transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#dashboard #banner  .slide.out {
+    -webkit-animation-name: slideOut;
+		transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(startYposition);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(endYposition);
+    }
+}
+
+@-webkit-keyframes slideOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(startYposition);
+    } 
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(endYposition);
+    }
+}
+
+@media screen and (orientation:landscape){
+
+/* #dashboard #banner { */
+
+#dashboard #banner {
+	display:none;
+/*	display:none; */
+}
+
+#dashmenu {
+	top: 43px !important;
+/*	padding-top:7% !important; */
+	padding-top:9% !important;
+	z-index:1 !important;
+	width:90vw !important;
+}
+
+/*
+#dashboard #banner div img {
+	position:relative;
+	top: 43px;
+	width:100%;
+}
+
+#dashmenu {
+	width:95% !important;
+	padding-top:9% !important;
+	z-index:1 !important;
+}
+*/
+
+#bonusdialog {
+	height:98vh !important;
+	width:60vw !important;
+	top:2% !important;
+}
+
+}
+
+@media screen and (orientation:portrait){
+#dashboard #banner div img {
+	position: fixed;
+	top: 43px; 
+	width:100%;
+	z-index:8;
+}
+
+#dashmenu {
+	width:95% !important;
+/*	padding-top:67% !important; */
+	padding-top:63% !important;
+	z-index:1 !important;
+}
+
+.ui-footer .ui-title{
+font-size:x-small !important;
+font-stretch:ultra-expanded !important;
+}
+}
+
+@media only screen and (min-width: 320px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#dashboard .ui-li-thumb, .ui-listview .ui-li-icon {
+max-width: 70px !important;
+max-height: 70px !important;
+}
+
+#dashboard .ui-li-heading {
+	font-size:11px !important;
+	overflow:visible !important;
+	font-weight:bold !important;
+	margin:.6em 0 !important;
+	text-overflow:ellipsis !important;
+	padding-top:12%;
+}
+
+#dashboard .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+min-height:59px !important;
+padding-left:69px !important;
+padding-bottom:0px !important;
+}
+
+.ui-li-has-arrow .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-arrow {
+    padding-right: 0px !important;
+}
+
+.ui-li .ui-btn-text a.ui-link-inherit {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+}
+
+#dashmenu .ui-btn-icon-right .ui-icon {
+    right: 1px !important;
+	padding: 0px !important;
+	top:20% !important;
+}
+
+#dashmenu-left {
+	width: 49% !important;
+	height:auto !important;
+	float:left !important;
+}
+
+#dashmenu-right {
+	width: 49% !important;
+	height:auto !important;
+	float:right !important;
+}
+}
+
+@media only screen and (min-width: 350px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
+#dashboard .ui-li-thumb, .ui-listview .ui-li-icon {
+max-width: 70px !important;
+max-height: 70px !important;
+}
+
+#dashboard .ui-li-heading {
+	font-size:14px !important;
+	overflow:visible !important;
+	font-weight:bold !important;
+	margin:.6em 0 !important;
+	text-overflow:ellipsis !important;
+	padding-top:3px;
+}
+
+#dashboard .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+min-height:59px !important;
+padding-left:69px !important;
+padding-bottom:0px !important;
+}
+
+#dashmenu .ui-btn-icon-right .ui-icon {
+    right: 1px !important;
+	padding: 0px !important;
+	top:20% !important;
+}
+
+#dashmenu-left {
+	width: 49% !important;
+	height:auto !important;
+	float:left !important;
+}
+
+#dashmenu-right {
+	width: 49% !important;
+	height:auto !important;
+	float:right !important;
+}
+
+}
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#dashboard .ui-li-heading {
+	font-size:18px !important;
+	overflow:visible !important;
+	font-weight:bold !important;
+	margin:.6em 0 !important;
+	text-overflow:ellipsis !important;
+	padding-top:0px;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#dashboard .ui-li-heading {
+	font-size:30px !important;
+	overflow:visible !important;
+	font-weight:bold !important;
+	margin:.6em 0 !important;
+	text-overflow:ellipsis !important;
+	padding-top:0px;
+}
+}
+
+/* 
+body {
+	background:black;
+}
+*/
+
+/* dashboard settings */
+#dashboard {
+	background:black;
+}
+
+#dashboard #header {
+	text-align:center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:10;
+}
+
+#dashboard #header.ui-header .ui-title{
+    text-overflow: inherit !important;
+    overflow: inherit !important;
+}
+
+#dashboard #rate {
+	text-align:left !important;
+	right:0px;
+	overflow: inherit !important;
+    text-overflow: inherit !important;
+}
+
+#dashboard #support {
+	text-align:left !important;
+	left:0px;
+}
+
+#dashboard #support .ui-btn-inner {
+	padding-left:3px !important;
+	left:0px;
+    text-overflow: inherit !important;
+    overflow: inherit !important;
+}
+
+#dashboard #footer {
+	text-align:center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#dashboard #footer h4{
+    right: 7%;
+    position: fixed;
+    padding-top: 5px !important;
+	width: 100%;
+}
+
+#dashboard .ui-footer  .ui-btn{
+	text-align:right !important;
+	left:39% !important;
+}
+
+#dashboard #coded {
+color:rgba(255,0,200,1.00)  !important;
+}
+
+#dashboard .decortxt {
+text-color:rgba(255,0,151,1.00)  !important;
+color:rgba(255,0,151,1.00)  !important;
+}
+
+#banner img {
+	/* border:groove #000 !important;
+	border-style:ridge !important;
+	border-radius:4px; */
+	
+	border-left:groove #000 !important;
+	border-left-style:inherit !important;
+	
+	border-right:groove #000 !important;
+	border-right-style:inherit !important;
+	
+	border-bottom:groove #000 !important;
+	border-bottom-style:ridge !important;
+	border-bottom-right-radius:15px;
+	border-bottom-left-radius:15px;
+	
+	border-top:thick #000 !important;
+	border-top-style:solid;
+	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.75),0 4px 8px 0 rgba(255, 254, 254, 0.93) !important;
+}
+
+#dashboard div {
+	padding: 0px;
+}
+
+/* dashmenu */
+#dashboard .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+border:inset rgba(166,135,12,0.00) 2px  !important;
+border-style: ridge !important;
+border-radius:4px;
+}
+
+#dashmenu img {
+	/* border:inset rgba(255,204,0,0.85) 1.99px !important; */
+	/* border:inset rgba(255, 255, 255, 250.65) !important; */
+	border-style:ridge !important;
+	border-radius:4px;
+	height:100% !important;
+}
+
+#dashmenu .ui-li .ui-btn-text {
+	/* padding: 0.7em 75px 0.7em 15px; */
+	padding:0px !important;
+	margin:0px !important;
+}
+
+#dashmenu .ui-li-has-thumb .ui-btn-inner {
+	padding: 0px !important;
+	margin:0px !important;
+}
+
+#dashmenu li h2{
+	text-align:center !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	white-space:normal !important;
+}
+
+#dashmenu p {
+	font-size:50px !important;
+}
+
+#dashmenu-left {
+	width: 48%;
+	height:auto !important;
+	float:left !important;
+}
+
+#dashmenu-right {
+	width: 48%;
+	height:auto !important;
+	float:right !important;
+}
+
+/* About Dialog settings */
+.gridContainer.clearfix #LayoutDiv1 #dashboard #aboutDialog {
+	border: medium rgba(253, 0, 152, 0.62) groove;
+/*	width:50% !important;
+	bottom:0px !important;
+	right:1% !important; */
+}
+
+	#aboutDialog h6 {
+	padding: 0px !important;
+	border: 0px !important;
+
+	margin: 0px !important;
+	top: 0px !important;
+}
+
+	#aboutDialog h5 {
+	padding: 0px !important;
+	border: 0px !important;
+	margin: 0px !important;
+	/* color: rgba(0, 100, 255, 255) !important; */
+}
+
+	#aboutDialog h6 a {
+	 color: rgba(5, 5, 5, 0.45) !important;
+}
+
+	#aboutDialog #logo-img {
+		border: 1px rgba(100, 100, 100, 0.05) groove;
+		border-style:ridge;
+		border-radius:8px;
+}
+
+/* Rate Dialog settings */
+
+.ui-popup-screen.in {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    position: absolute;
+    filter: Alpha(Opacity=0);
+    z-index: 1099;
+    background-color: rgba(0,0,0,0.8);
+	opacity: 0.9 !important;
+	}
+	
+	/*
+.ui-popup-active {
+    z-index: 1100;
+    position: absolute;
+    padding: 0;
+    outline: 0;
+    top: 50vh !important;
+    left: 8% !important;
+    right: 8% !important;
+} */
+
+#rateDialog .ui-header .ui-title {
+    text-overflow: inherit !important;
+    overflow: inherit !important;
+	text-align:center !important;
+}
+
+#rateDialog h3 {
+    margin-top: 8px;
+	font-size:small;
+   width: 90% !important;
+}
+
+#rateDialog .ui-btn-inner, .ui-btn-text{
+    text-overflow: inherit !important;
+    overflow: inherit !important;
+    text-align: center !important;
+	text-align:justify !important;
+}
+
+/* Bonus Dialog */
+#bonusdialog {
+ 	height:80vh;
+ 	width:90vw;
+ 	border-radius:2%;
+}
+#bonuscontent{
+	height:80vh !important;
+	padding:0px !important;
+	border-radius:2%;
+	background:black;
+	border:groove;
+	overflow:hidden !important;
+}
+
+	#online-bonus {
+    margin: 0px !important;
+    padding-top:5% !important; 
+	border-radius:2% !important;
+	height: 100% !important;
+	width: 100% !important;
+	top:0px; bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:1500;
+	overflow:scroll !important;
+}
+
+#online-bonus img{
+	width:100% !important;
+	height:50%;
+	border-left:groove rgba(255,255,255,0.71) !important;
+	border-left-style:inherit !important;
+	
+	border-right:groove rgba(255,255,255,0.71) !important;
+	border-right-style:inherit !important;
+	
+	border-bottom-style:ridge !important;
+	border-bottom-right-radius:15px;
+	border-bottom-left-radius:15px;
+	
+	border-top:thick rgba(255,255,255,0.71) !important;
+	border-top-style:solid;
+	box-shadow: 0 2.2px 5px 0 rgba(255,255,255,0.20),0 2.2px 5px 0 rgba(255,255,255,0.20) !important;
+}
+
+#online-bonusmenu {
+	padding-top:2% !important;  
+	}
+	
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.pending img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#dashboard {
+    background: black;
+    background-image: url("pattern2metalholes-deep.jpg");
+}
+
+#painted_btn_A1, #painted_btn_A2, #painted_btn_A3, #painted_btn_A4, #painted_btn_A5, #painted_btn_A6 {
+    -webkit-box-shadow: inset 0 1px rgba(153,255,51,.76), inset 0 0 4px rgba(153,255,51,.67);
+    -moz-box-shadow: inset 0 1px rgba(153,255,51,.76), inset 0 0 4px rgba(153,255,51,.67);
+    box-shadow: inset 0 1px rgba(153,255,51,.76), inset 0 0 4px rgba(153,255,51,.67);
+    /* border: solid 2px rgba(255, 51, 51, 0.9); */
+    border: solid 4px rgb(0, 0, 0);
+    background-image: -webkit-linear-gradient(bottom, rgb(232, 232, 231), rgb(255, 255, 255));
+    background-image: -moz-linear-gradient(bottom, rgb(217, 92, 177), rgb(251, 218, 246));
+    background-image: -o-linear-gradient(bottom, rgb(217, 92, 177), rgb(251, 218, 246));
+    background-image: -ms-linear-gradient(bottom, rgb(217, 92, 177), rgb(251, 218, 246));
+    /* background-image: linear-gradient(to top, rgb(217, 92, 177), rgb(251, 218, 246)); */
+    text-shadow: 0 0.1px 0 #8e8b6f;
+}
+
+#painted_btn_A1  .ui-li-heading,
+#painted_btn_A2  .ui-li-heading,
+#painted_btn_A3  .ui-li-heading,
+#painted_btn_A4  .ui-li-heading,
+#painted_btn_A5  .ui-li-heading,
+#painted_btn_A6  .ui-li-heading {
+    color: rgb(0, 0, 0) !important;
+}
+
+#painted_btn_B1, #painted_btn_B2, #painted_btn_B3, #painted_btn_B4, #painted_btn_B5, #painted_btn_B6 {
+border: solid 4px rgb(0, 0, 0);
+    -webkit-box-shadow: inset 0 1px rgba(153,255,51,.76), inset 0 0 4px rgba(153,255,51,.67);
+    -moz-box-shadow: inset 0 1px rgba(153,255,51,.76), inset 0 0 4px rgba(153,255,51,.67);
+    box-shadow: inset 0 1px rgba(153,255,51,.76), inset 0 0 4px rgba(153,255,51,.67);
+    /* border: solid 2px rgba(255, 51, 51, 0.9); */
+    border: solid 4px rgb(0, 0, 0);
+    background-image: -webkit-linear-gradient(bottom, #ff00bc, #ffb8ec);
+    background-image: -moz-linear-gradient(bottom, rgb(217, 92, 177), rgb(251, 218, 246));
+    background-image: -o-linear-gradient(bottom, rgb(217, 92, 177), rgb(251, 218, 246));
+    background-image: -ms-linear-gradient(bottom, rgb(217, 92, 177), rgb(251, 218, 246));
+    /* background-image: linear-gradient(to top, rgb(217, 92, 177), rgb(251, 218, 246)); */
+    text-shadow: 0 0.9px 0 #bcfff3;
+	}  	
+	
+#painted_btn_B1  .ui-li-heading,
+#painted_btn_B2  .ui-li-heading,
+#painted_btn_B3  .ui-li-heading,
+#painted_btn_B4  .ui-li-heading,
+#painted_btn_B5  .ui-li-heading,
+#painted_btn_B6  .ui-li-heading {
+    color: #ffffff !important;
+}	
+
+#painted_btn_A1  :hover,
+#painted_btn_A2  :hover,
+#painted_btn_A3  :hover,
+#painted_btn_A4  :hover,
+#painted_btn_A5  :hover,
+#painted_btn_A6  :hover,
+#painted_btn_B1 :hover,
+#painted_btn_B2 :hover,
+#painted_btn_B3 :hover,
+#painted_btn_B4 :hover,
+#painted_btn_B5 :hover, 
+#painted_btn_B6 :hover {
+	background-image: -webkit-linear-gradient(bottom, rgb(255, 102, 0), #F9D3F1) !important;
+    -webkit-filter: grayscale(60%);
+    filter: grayscale(60%);
+}
